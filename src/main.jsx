@@ -5,6 +5,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Home from "./components/home/Home";
 import Blogs from "./components/blogs/Blogs";
 import Bookmarks from "./components/bookmarks/Bookmarks";
+import Blog from "./components/blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/blog",
+        path: "/blogs",
         loader: () => fetch("https://dev.to/api/articles?per_page=20&top=7"),
         element: <Blogs />,
+      },
+      {
+        path: "/blog/:id",
+        loader: ({ params }) =>
+          // fetch(`https://dev.to/api/articles/${params.id}`),
+        console.log(params.id),
+        element: <Blog />,
       },
       {
         path: "/bookmarks",

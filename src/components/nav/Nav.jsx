@@ -22,7 +22,7 @@ function Nav() {
               className={({ isActive }) =>
                 isActive ? "text-[#FF204E]" : "text-black"
               }
-              to="/blog"
+              to="/blogs"
             >
               Blog
             </NavLink>

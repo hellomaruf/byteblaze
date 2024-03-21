@@ -5,9 +5,12 @@ import Footer from "../Footer/Footer";
 function MainLayout() {
   return (
     <div>
-          <Nav />
-          <Outlet />
-          <Footer/>
+      <Nav />
+      <div className="min-h-[calc(100vh-120px)]">
+        <Outlet />
+      </div>
+
+      <Footer />
     </div>
   );
 }
