@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 function Nav() {
   return (
     <div>
@@ -9,16 +9,31 @@ function Nav() {
           </a>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <Link to='/'>
+          <ul className="menu menu-horizontal flex gap-8 mr-4 font-bold px-1">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#FF204E]" : "text-black"
+              }
+              to="/"
+            >
               Home
-            </Link>
-            <li>
-              <a href="">Blog</a>
-            </li>
-            <li>
-              <a href="">Bookmark</a>
-            </li>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#FF204E]" : "text-black"
+              }
+              to="/blog"
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#FF204E]" : "text-black"
+              }
+              to="/bookmarks"
+            >
+              Bookmarks
+            </NavLink>
           </ul>
           {/* theme */}
           <label className="cursor-pointer grid place-items-center">
