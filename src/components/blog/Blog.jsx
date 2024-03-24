@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 function Blog() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -35,7 +35,7 @@ function Blog() {
           <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:text-gray-800">
             <Link
               onClick={() => setTabIndex(0)}
-              // to={`content`}
+              to=''
               rel=""
               className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
                 tabIndex === 0
@@ -59,7 +59,7 @@ function Blog() {
             </Link>
             <Link
               onClick={() => setTabIndex(1)}
-              // to={`author`}
+              to={`author`}
               rel="noopener noreferrer"
               href="#"
               className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
@@ -86,6 +86,7 @@ function Blog() {
             <p>Insert the actual text content here...</p>
           </div>
         </article>
+        <Outlet/>
         <div>
           <div className="flex flex-wrap py-6 gap-2 border-t border-dashed border-gray-400">
             <a
