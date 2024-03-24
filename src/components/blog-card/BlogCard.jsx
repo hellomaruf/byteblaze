@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function BlogCard({ blog }) {
   const { id, cover_image, title, published_at, description } = blog;
   return (
-    <div className="">
+    <div className="transition hover:scale-105  rounded-md">
       <Link
         rel="noopener noreferrer"
         to={`/blog/${id}`}
