@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { saveBlogsToLocalStorage } from "../utils/localStorage";
 
 function Blog() {
   const [tabIndex, setTabIndex] = useState(0);
-
   const blog = useLoaderData();
   const {
     published_at,
     positive_reactions_count,
     comments_count,
     reading_time_minutes,
+    id
   } = blog;
-
+  const handleBookmarks = () => {
+    saveBlogsToLocalStorage(id)
+  };
   return (
     <div>
       <div className="max-w-2xl px-6 py-16 mx-auto space-y-12">
@@ -83,6 +86,12 @@ function Blog() {
               </svg>
               <span>Author</span>
             </Link>
+            <div
+              onClick={() => handleBookmarks(blog)}
+              className="text-2xl px-4 py-3 rounded-full ml-5 text-[#FF204E] hover:scale-105 transition bg-pink-200"
+            >
+              <i className="ri-bookmark-3-fill"></i>
+            </div>
           </div>
         </article>
         <Outlet />
