@@ -1,9 +1,13 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import BlogCard from "../blog-card/BlogCard";
+import Loader from "../Loader/Loader";
 
 function Blogs() {
   const blogs = useLoaderData();
-  console.log(blogs[0]);
+  const navigation = useNavigation();
+  if (navigation.state === "loading") {
+    return <Loader />;
+  }
   return (
     <div>
       <section className=" text-gray-100">
