@@ -84,9 +84,6 @@ function Blog() {
               <span>Author</span>
             </Link>
           </div>
-          <div className="">
-            <p>Insert the actual text content here...</p>
-          </div>
         </article>
         <Outlet />
         <div></div>
