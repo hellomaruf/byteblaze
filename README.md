@@ -13,6 +13,18 @@ ByteBlaze is a cutting-edge web application designed to streamline project manag
 - **Analytics Dashboard**: Gain insights into project performance with detailed analytics and reports.
 - **Mobile Responsive**: Access and manage your projects on the go with a fully responsive design.
 
+## Technologies Used
+
+- **JavaScript (ES6+):** Core programming language for interactivity.
+- **React.js:** A JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework for styling.
+- **Node.js:** Server-side JavaScript environment.
+- **Express.js:** A web application framework for Node.js.
+- **MongoDB:** A NoSQL database for storing application data.
+- **npm:** Node package manager to manage dependencies.
+- **Git & GitHub:** Version control and repository hosting.
+- **Vercel:** Deployment platform for frontend and serverless functions.
+
 ## Live Demo
 
 Check out the live version of ByteBlaze [here](https://your-live-demo-link.com).
